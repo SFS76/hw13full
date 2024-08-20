@@ -28,7 +28,7 @@ public class Book {
         }
         @Override
         public String toString() {
-            return "book = " + nameBook + " author " + author.firstName + " " + author.lastName + " year " + publishingYear;
+            return "book = " + nameBook + " author " + author.toString() + " year " + publishingYear;
         }
         @Override
         public boolean equals(Object other) {
@@ -37,8 +37,7 @@ public class Book {
             }
             Book book = (Book) other;
             return nameBook.equals(book.nameBook)
-                    && author.firstName.equals(book.author.firstName)
-                    && author.lastName.equals(book.author.lastName);
+                    && author.equals(author);
         }
         @Override
         public int hashCode() {
